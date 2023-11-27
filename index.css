@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* 水色ベース */
+}
+
+header {
+    background-color: #0097a7; /* 濃い水色 */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #0097a7; /* リンクも濃い水色 */
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #0097a7; /* フッターも濃い水色 */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td, th {
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #e0f7fa; /* 偶数行も水色ベース */
+}
+
+tr:hover {
+    background-color: #b2ebf2; /* ホバー時は明るい水色 */
+}

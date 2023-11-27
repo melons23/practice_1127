@@ -1,2 +1,74 @@
-<p>練習用です</p>
-<p>追加しました</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業のWEBサイト</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>企業のWEBサイト</h1>
+        <div id="character" style="position: absolute; top: 50px; left: 0;">
+            <img src="https://tsukatte.com/wp-content/uploads/2022/08/penguin_zenshin.png" alt="キャラクター" style="width:40px;height:40px">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">会社概要</a></li>
+            <li><a href="#services">サービス</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="#system">システム</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>会社概要</h2>
+            <p>ここに会社概要を記述します。</p>
+        </section>
+        <section id="services">
+            <h2>サービス</h2>
+            <table>
+                <tr>
+                    <th>サービス名</th>
+                    <th>詳細</th>
+                </tr>
+                <tr>
+                    <td>サービス1</td>
+                    <td>ここにサービス1の詳細を記述します。</td>
+                </tr>
+                <tr>
+                    <td>サービス2</td>
+                    <td>ここにサービス2の詳細を記述します。</td>
+                </tr>
+            </table>
+        </section>
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <p>ここにお問い合わせ方法を記述します。</p>
+        </section>
+        <section id="system">
+            <h2>システム</h2>
+            <p>ここにシステム情報を記述します。</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2022 企業のWEBサイト</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        function moveCharacter() {
+            $("#character").animate({left: "+=50"}, 1000, "linear", function() {
+                if ($(this).position().left > window.innerWidth) {
+                    $(this).css("left", -$(this).width());
+                }
+                moveCharacter();
+            });
+        }
+        moveCharacter();
+    });
+</script>
